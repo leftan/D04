@@ -18,6 +18,14 @@
 ###############################################################################
 # Imports
 
+def count(word, letter):
+    '''word, letter: str'''
+    result = 0
+    for char in word:
+        if char == letter:
+            result += 1
+    return result
+
 
 # Body
 
@@ -27,7 +35,9 @@ def main():
 
     # Remove print("Hello World!") and add several functions calls to count()
     # below, passing various strings and letters
-    print("Hello World!")
+    print(count('banana', 'a'))
+    print(count('tree', 'e'))
+    print(count('berkeley', 'e'))
 
 
 if __name__ == '__main__':

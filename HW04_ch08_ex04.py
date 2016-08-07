@@ -14,17 +14,17 @@
 
 
 def any_lowercase1(s):
-    """Explain what is wrong, if anything, here.
-    """
+    """the function checks if the first letter is lowercase."""
     for c in s:
-        if c.islower():
-            return True
+        if c.islower(): 
+            return True 
         else:
             return False
 
 
 def any_lowercase2(s):
-    """Explain what is wrong, if anything, here.
+    """the function checks if letter 'c' is lowercase, so it always returns True.
+    In addition, it returns a string value 'True' rather than a boolean value True.
     """
     for c in s:
         if 'c'.islower():
@@ -34,7 +34,8 @@ def any_lowercase2(s):
 
 
 def any_lowercase3(s):
-    """Explain what is wrong, if anything, here.
+    """variable 'flag' doesn't have an initial value. 
+    e.g. flag = NONE or flag = False.
     """
     for c in s:
         flag = c.islower()
@@ -42,8 +43,7 @@ def any_lowercase3(s):
 
 
 def any_lowercase4(s):
-    """Explain what is wrong, if anything, here.
-    """
+    """this is correct! """
     flag = False
     for c in s:
         flag = flag or c.islower()
@@ -51,8 +51,7 @@ def any_lowercase4(s):
 
 
 def any_lowercase5(s):
-    """Explain what is wrong, if anything, here.
-    """
+    """this function returns True only if all letters are lowercase."""
     for c in s:
         if not c.islower():
             return False
@@ -66,8 +65,11 @@ def main():
     # call that function with a string for which the function returns
     # incorrectly.
     # ex.: any_lowercase_("thisstringmessesupthefunction")
-    print("Hello World!")
-
+    print(any_lowercase1('Itchecksthefirstletter'))
+    print(any_lowercase2('THISCANBEANYTHING'))
+    print(any_lowercase3(''))
+    print(any_lowercase4('THISISCoRRECT'))
+    print(any_lowercase5('ithastobeAlllowercase'))
 
 if __name__ == '__main__':
     main()
